@@ -35,3 +35,4 @@ jobs:
 
       #Run Newman Test
       - name: Running first collection
+        run: newman run AutomationExercise.com.postman_collection.json --environment automationexercise.com.postman_environment.json
