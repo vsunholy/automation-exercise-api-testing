@@ -640,12 +640,12 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "bebras22",
+									"value": "bebras223",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "bebruni330001@gmail.com",
+									"value": "bebruni333001@gmail.com",
 									"type": "text"
 								},
 								{
@@ -816,72 +816,6 @@
 					"response": []
 				},
 				{
-					"name": "DELETE METHOD To Delete User Account",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"const respData = pm.response.json();\r",
-									"\r",
-									"pm.test(\"Response body exist\", () => {\r",
-									"    pm.response.to.be.withBody;\r",
-									"    pm.response.to.be.json;\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Status code is 200\", () => {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response message correct\", () => {\r",
-									"    pm.expect(respData.message).to.eql(\"Account deleted!\");\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response code is 200\", () => {\r",
-									"    pm.expect(respData.responseCode).to.eql(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response time is less than 1s\", () => {\r",
-									"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "bebruni3000@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "12345",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/api/deleteAccount",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"deleteAccount"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "PUT METHOD To Update User Account",
 					"event": [
 						{
@@ -925,12 +859,12 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "bebras",
+									"value": "bebras3212312",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "bebruni3000@gmail.com",
+									"value": "bebruni333001@gmail.com",
 									"type": "text"
 								},
 								{
@@ -941,7 +875,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/api/updateAccount?name=bebras&email=bebruni3000@gmail.com&password=12345",
+							"raw": "{{base_url}}/api/updateAccount?name=bebras223&email=bebruni333001@gmail.com&password=12345",
 							"host": [
 								"{{base_url}}"
 							],
@@ -952,11 +886,11 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "bebras"
+									"value": "bebras223"
 								},
 								{
 									"key": "email",
-									"value": "bebruni3000@gmail.com"
+									"value": "bebruni333001@gmail.com"
 								},
 								{
 									"key": "password",
@@ -987,7 +921,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/api/getUserDetailByEmail?email=bebruni3000@gmail.com",
+							"raw": "{{base_url}}/api/getUserDetailByEmail?email=bebruni333001@gmail.com",
 							"host": [
 								"{{base_url}}"
 							],
@@ -998,8 +932,74 @@
 							"query": [
 								{
 									"key": "email",
-									"value": "bebruni3000@gmail.com"
+									"value": "bebruni333001@gmail.com"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE METHOD To Delete User Account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const respData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response body exist\", () => {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response message correct\", () => {\r",
+									"    pm.expect(respData.message).to.eql(\"Account deleted!\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response code is 200\", () => {\r",
+									"    pm.expect(respData.responseCode).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 1s\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "bebruni333001@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/deleteAccount",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"deleteAccount"
 							]
 						}
 					},
